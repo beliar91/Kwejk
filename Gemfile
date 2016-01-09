@@ -47,3 +47,5 @@ end
 # my gems
 gem 'rails_admin'
 gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'therubyracer'

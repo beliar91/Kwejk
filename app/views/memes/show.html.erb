@@ -8,6 +8,8 @@
   <dd><%= @meme.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @meme.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:image) %>:</strong></dt>
+  <dd><%= image_tag @meme.image.url(:medium) %></dd>
   <dd><%= @meme.user_id %></dd>
 </dl>
 

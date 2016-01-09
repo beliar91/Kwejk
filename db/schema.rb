@@ -11,14 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160109153002) do
+ActiveRecord::Schema.define(version: 20160109155517) do
 
   create_table "memes", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.boolean  "active"
   end
 
   add_index "memes", ["user_id"], name: "index_memes_on_user_id"
